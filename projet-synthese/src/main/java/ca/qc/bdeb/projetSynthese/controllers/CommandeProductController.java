@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ca.qc.bdeb.projetSynthese.dto.ProductDto;
 import ca.qc.bdeb.projetSynthese.models.CommandeProduct;
 import ca.qc.bdeb.projetSynthese.models.Product;
 import ca.qc.bdeb.projetSynthese.services.CommandeProductServiceImpl;
@@ -35,5 +36,12 @@ public void update(@RequestBody CommandeProduct commandeProduct ,@PathVariable("
 @CrossOrigin(origins = "*")
 @GetMapping("/commandeProducts/{commandeId}/products")
 public List<Product> getAllProductByCommande(@PathVariable("commandeId") int commandeId) {
-	return commandeProductServiceImpl.getAllProductByCommande(commandeId);}
+	return commandeProductServiceImpl.getAllProductByCommande(commandeId);
+	}
+
+@CrossOrigin(origins = "*")
+@GetMapping("/commandeProducts/{commandeId}/productDtos")
+public List<ProductDto> getAllProductDtoByCommande(@PathVariable("commandeId") int commandeId) {
+	return commandeProductServiceImpl.getAllProductDtoByCommande(commandeId);
+	}
 }

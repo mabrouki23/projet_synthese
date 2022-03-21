@@ -8,6 +8,7 @@ import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import ca.qc.bdeb.projetSynthese.dto.ProductDto;
 import ca.qc.bdeb.projetSynthese.models.CommandeProduct;
 import ca.qc.bdeb.projetSynthese.models.CommandeProductPK;
 import ca.qc.bdeb.projetSynthese.models.Product;
@@ -40,6 +41,12 @@ public class CommandeProductServiceImpl implements CommandeProductServiceInterfa
 	public List<Product> getAllProductByCommande(int commandeId) {
 		
 		return commandeProductsRepository.findByCommande(commandeId);
+	}
+
+	@Override
+	public List<ProductDto> getAllProductDtoByCommande(int commandeId) {
+		
+		return commandeProductsRepository.findByCommandeDto(commandeId);
 	}
 
 }
