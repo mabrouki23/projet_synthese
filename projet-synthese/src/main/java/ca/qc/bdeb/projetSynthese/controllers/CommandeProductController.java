@@ -28,7 +28,7 @@ private CommandeProductServiceImpl commandeProductServiceImpl;
 public void delete(@PathVariable("commandeId") Integer commandeId,@PathVariable("productId") Integer productId) {
 	commandeProductServiceImpl.delete(commandeId, productId);
 }
-@CrossOrigin(origins = "*")
+@CrossOrigin(origins = "*")//----
 @PutMapping("/commandeProducts/{commandeId}/{productId}")
 public void update(@RequestBody CommandeProduct commandeProduct ,@PathVariable("commandeId") Integer commandeId,@PathVariable("productId") Integer productId) {
 	commandeProductServiceImpl.update(commandeProduct,commandeId, productId);
