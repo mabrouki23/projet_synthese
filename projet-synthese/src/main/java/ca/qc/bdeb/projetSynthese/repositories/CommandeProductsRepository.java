@@ -19,8 +19,8 @@ public interface CommandeProductsRepository extends JpaRepository<CommandeProduc
 	@Query("select p from CommandeProduct cp  join cp.product p where cp.commandeId =:id")
 	public List<Product> findByCommande(@Param("id") int id);
 	
-	@Query("select new ca.qc.bdeb.projetSynthese.dto.ProductDto(p.productName,p.description,p.data,cp.quantite) from CommandeProduct cp  join cp.product p where cp.commandeId =:id")
-	
+	@Query("select new ca.qc.bdeb.projetSynthese.dto.ProductDto(p.productName,p.description,p.data,cp.quantite) "
+			+ "from CommandeProduct cp  join cp.product p where cp.commandeId =:id")	
 	public List<ProductDto> findByCommandeDto(@Param("id") int id);
 
 }

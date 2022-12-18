@@ -43,7 +43,11 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
     @NamedQuery(name = "Commande.findByTotalPrice", query = "SELECT c FROM Commande c WHERE c.totalPrice = :totalPrice")})
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class,property = "commandeId")
 public class Commande implements Serializable {   
-    @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	@Id@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     @Column(name = "commande_id")
     private Integer commandeId;
