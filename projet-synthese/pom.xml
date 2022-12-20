@@ -97,7 +97,7 @@
         <configuration>
           <executable>ng</executable>
           <!-- optional -->
-          <workingDirectory>frontend</workingDirectory>
+          <workingDirectory>src/main/resources/frontend</workingDirectory>
           <arguments>
             <argument>build</argument>           
           </arguments>         
