@@ -97,7 +97,7 @@
         <configuration>
           <executable>ng</executable>
           <!-- optional -->
-          <workingDirectory>src/main/resources/angular</workingDirectory>
+          <workingDirectory>projet_synthese/src/main/resources/angular</workingDirectory>
           <arguments>
             <argument>build</argument>           
           </arguments>         
