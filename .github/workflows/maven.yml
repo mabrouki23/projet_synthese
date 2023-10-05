@@ -32,11 +32,11 @@ jobs:
         node-version: ${{ matrix.node-version }} 
          
     - run: npm install 
-      working-directory: D:\a\projet_synthese\projet_synthese\src\main\resources\angular\frontend  
+      working-directory: .\src\main\resources\angular\frontend  
     - run: npm ci
-      working-directory: D:\a\projet_synthese\projet_synthese\src\main\resources\angular\frontend 
+      working-directory: .\src\main\resources\angular\frontend 
     - run: npm run build --if-present
-      working-directory: D:\a\projet_synthese\projet_synthese\src\main\resources\angular\frontend   
+      working-directory: .src\main\resources\angular\frontend   
     - name: NPM-Version
   # You may pin to the exact commit or the version.
   # uses: Reedyuk/NPM-Version@805800379b213c9193ede2c7a7f14a1a99e4d10b
@@ -45,7 +45,7 @@ jobs:
     # This will be the version you want to set in the package.json file
         version: 9.8.1
     # The location of the package.json file, defaults to current directory.
-        package: D:\a\projet_synthese\projet_synthese\src\main\resources\angular\frontend   
+        package: .\src\main\resources\angular\frontend   
     - uses: actions/checkout@v3
     - name: Set up JDK 17
       uses: actions/setup-java@v3
